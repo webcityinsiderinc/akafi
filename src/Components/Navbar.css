@@ -1,0 +1,174 @@
+@charset "UTF-8";
+/* =========================
+   NAVBAR BASE
+========================= */
+.navbar-wrapper {
+  width: 100%;
+  top: 0px;
+  z-index: 1000;
+  background: transparent;
+  transition: all 0.3s ease;
+  padding: 20px 0px;
+}
+.navbar-wrapper.scrolled {
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.nav-wrapper {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =========================
+   LEFT SIDE (LOGO + MENU)
+========================= */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+/* =========================
+   MENU
+========================= */
+.menu {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin-bottom: 0;
+}
+.menu li {
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+}
+.menu li span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* =========================
+   DROPDOWN BASE (IMPORTANT)
+========================= */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* 🔑 no gap – hover safe */
+  left: 0;
+  background: #fff;
+  display: none;
+  z-index: 999;
+}
+
+/* OPEN DROPDOWN ON HOVER */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* =========================
+   SIMPLE DROPDOWNS
+========================= */
+.dropdown-menu.simple {
+  padding: 14px 18px;
+  min-width: 180px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.dropdown-menu.simple li {
+  padding: 6px 0;
+  cursor: pointer;
+}
+.dropdown-menu.simple li:hover {
+  color: #7b2cbf;
+}
+
+/* =========================
+   OUR WORK (LIST + CARDS)
+========================= */
+.dropdown-menu.work-dropdown {
+  gap: 30px;
+  padding: 25px;
+  min-width: 990px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown:hover > .dropdown-menu.work-dropdown {
+  display: flex;
+}
+
+/* LEFT LIST */
+.work-list {
+  list-style: none;
+  min-width: 220px;
+}
+.work-list li {
+  padding: 6px 0;
+  cursor: pointer;
+}
+.work-list li:hover {
+  color: #7b2cbf;
+}
+
+/* RIGHT CARDS */
+.work-cards {
+  display: flex;
+  gap: 20px;
+}
+.work-cards .card {
+  width: 200px;
+  background-color: #f9fafa;
+  cursor: pointer;
+}
+.work-cards .card img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+.work-cards .card .card-text-wraper {
+  background-color: #f9fafa;
+  padding: 10px 10px;
+}
+.work-cards .card .card-text-wraper h6 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #5A1482;
+}
+.work-cards .card .card-text-wraper p {
+  font-size: 14px;
+}
+
+/* =========================
+   RIGHT SIDE BUTTONS
+========================= */
+.nav-right {
+  display: flex;
+  gap: 15px;
+}
+.nav-right button {
+  padding: 8px 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.nav-right .volunteer {
+  background: transparent;
+  border: 1px solid #7b2cbf;
+}
+.nav-right .donate {
+  background: #7b2cbf;
+  color: #fff;
+  border: none;
+}/*# sourceMappingURL=Navbar.css.map */
