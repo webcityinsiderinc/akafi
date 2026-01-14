@@ -6,12 +6,79 @@ import arrow from "../images/arrow.png"
 import women from "../images/women-empowerment.jpg"
 import widow from "../images/widows-fund.jpg"
 import Footer from '../Components/Footer'
+import img1 from "../images/active-img-1.jpg"
+import img2 from "../images/active-img-2.jpg"
+import img3 from "../images/active-img-3.jpg"
+
+const programs = [
+  {
+    date: "Nov 2025",
+    title: "Orphan Support Program",
+    location: "The Gambia",
+    desc:
+      "AKAFI provides school uniforms, shoes, and essential learning materials to help orphans return to school with dignity. This program restores confidence, protects vulnerable children, and ensures they remain in safe classrooms where they can grow and dream…",
+  image: img1,
+    },
+  {
+    date: "Nov 2025",
+    title: "Women’s Community Gardens",
+    location: "The Gambia",
+    desc:
+      "Through seeds, fertilizers, and agricultural training, AKAFI empowers women to grow food for their families and build sustainable income. These gardens strengthen households, improve nutrition, and create long-term stability within the community…...",
+    image: img2,
+  },
+  {
+    date: "Nov 2025",
+    title: "Widows Empowerment Fund",
+    location: "The Gambia",
+    desc:
+      "AKAFI provides micro-grants and basic business training to help widows start small businesses and regain financial independence. A small opportunity becomes a lifeline uplifting entire families through steady income and renewed hope…",
+    image: img3,
+  },
+];
 
 function ActiveProgramm() {
   return (
   <>
   <Navbar/>
-  <section className="hero-section"> <div className="hero-content"> <h1>ACTIVE PROGRAMS</h1> <p>Explore how you can make a difference by volunteering.</p> <button className="hero-btn">VOLUNTEER</button> </div> </section>
+      <section className="hero-section">
+        <div className="hero-content">
+          <h1>ACTIVE PROGRAMS</h1>
+          <p>Explore how you can make a difference by volunteering.</p>
+          <button className="hero-btn">VOLUNTEER</button>
+        </div>
+      </section>
+      {/* orphan cards section */}
+   <div className="programs">
+      <div className="programs-row">
+        {programs.map((item, index) => (
+          <div className="program-card" key={index}>
+            <div className="card-img">
+              <img src={item.image} alt={item.title} />
+            </div>
+
+            <div className="card-body p-4">
+              <div className="date">
+                <span>Nov</span>
+                <strong>2025</strong>
+              </div>
+
+              <div className="content">
+                <h4>{item.title}</h4>
+                <h6>{item.location}</h6>
+                <p>{item.desc}</p>
+
+                <a href="#" className="learn-more">
+                  LEARN MORE <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+      {/*  */}
       <div className="orphan-section">
             {/* Right image */}
             <div className="orphan-right">

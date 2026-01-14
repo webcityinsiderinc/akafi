@@ -70,19 +70,18 @@ const Navbar = () => {
             </li>
 
             {/* OTHER DROPDOWNS */}
-            <li className="dropdown">
-              <span>Our Impact <FaChevronDown /></span>
-              <ul className="dropdown-menu simple">
-                <li>Stories</li>
-                <li>Reports</li>
-              </ul>
+            <li>
+              <span>Our Impact</span>
             </li>
 
             <li className="dropdown">
               <span>Take Action <FaChevronDown /></span>
               <ul className="dropdown-menu simple">
-                <li>Volunteer</li>
                 <li>Donate</li>
+                  <li>Donate Monthly</li>
+                  <li>Ways To Give</li>
+                  <li>Partner With Us</li>
+                <li>Volunteer</li>
               </ul>
             </li>
 
