@@ -88,7 +88,8 @@ const Navbar = () => {
             <li className="dropdown">
               <span>About Us <FaChevronDown /></span>
               <ul className="dropdown-menu simple">
-                <li>Who We Are</li>
+                <li>Story & Mission</li>
+                <li>Our Team</li>
                 <li>Contact</li>
               </ul>
             </li>

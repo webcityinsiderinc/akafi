@@ -11,6 +11,10 @@ import WidowsFund from './Pages/WidowsFund';
 import OurImpact from './Pages/OurImpact';
 import Donate from './Pages/Donate';
 import DonateMonthely from './Pages/DonateMonthely';
+import WaysToGive from './Pages/WaysToGive';
+import Partner from './Pages/Partner';
+import Volunter from './Pages/Volunter';
+import StoryMission from './Pages/StoryMission';
 
 // Create router
 const router = createBrowserRouter([
@@ -21,8 +25,12 @@ const router = createBrowserRouter([
   { path: "women-community", element: <WomenCommunity/>,},
   { path: "widows-fund", element: <WidowsFund/>,},
   { path: "our-impact", element: <OurImpact/>,},
-   { path: "donate", element: <Donate/>,},
-    { path: "donate-monthley", element: <DonateMonthely/>,},
+  { path: "donate", element: <Donate/>,},
+  { path: "donate-monthley", element: <DonateMonthely/>,},
+  { path: "way-to-give", element: <WaysToGive/>,},
+  { path: "partner", element: <Partner/>,},
+  { path: "volunter", element: <Volunter/>,},
+  { path: "story-mission", element: <StoryMission/>,},
 ]);
 
 function App() {
