@@ -52,7 +52,9 @@ const HeroSlider = () => {
         </h1>
         <p>{slides[active].desc}</p>
 
-        <button className="donate-btn">DONATE NOW</button>
+        <button className="donate-btn">
+          <a href="donate">DONATE NOW</a>
+        </button>
       </div>
 
       <div className="slider-indicator">

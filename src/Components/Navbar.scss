@@ -52,12 +52,21 @@
     position: relative;
     font-weight: 500;
     cursor: pointer;
- 
+     font-size: 14px;
+    font-weight: 900;
+    color: #5A1482;
+    text-decoration: none;
 
     span {
       display: flex;
       align-items: center;
       gap: 6px;
+    }
+    a{
+    font-size: 14px;
+    font-weight: 900;
+    color: #5A1482;
+    text-decoration: none;
     }
   }
 }
@@ -117,7 +126,7 @@
 /* LEFT LIST */
 .work-list {
   list-style: none;
-  min-width: 220px;
+  // min-width: 220px;
 
   li {
     padding: 6px 0;
@@ -135,9 +144,9 @@
   gap: 20px;
 
   .card {
-       width: 200px;
      background-color: #f9fafa;
     cursor: pointer;
+    border: none;
 
     img {
       width: 100%;
@@ -154,7 +163,8 @@
     color: #5A1482;
         }
         p{
- font-size: 14px;
+    font-size: 12px;
+    font-weight: 400;
         }
     }
 
@@ -178,11 +188,94 @@
   .volunteer {
     background: transparent;
     border: 1px solid #7b2cbf;
+    a{
+      text-decoration: none;
+          font-family: "Manrope", Sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #5A1482;
+    }
   }
 
   .donate {
     background: #7b2cbf;
     color: #fff;
     border: none;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+  .nav-wrapper {
+    position: relative;
+  }
+
+  /* HAMBURGER */
+  .mobile-toggle {
+    display: block;
+    font-size: 22px;
+    cursor: pointer;
+    color: #5A1482;
+  }
+
+  /* MENU MOBILE */
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    z-index: 1;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  /* DROPDOWNS MOBILE */
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding-left: 15px;
+  }
+
+  .dropdown:hover > .dropdown-menu {
+    display: none; /* hover disable */
+  }
+
+  .dropdown > span {
+    justify-content: space-between;
+  }
+
+  /* OUR WORK DROPDOWN */
+  .dropdown-menu.work-dropdown {
+    flex-direction: column;
+    min-width: 100%;
+    gap: 15px;
+  }
+
+  .work-cards {
+    flex-direction: column;
+  }
+
+  /* RIGHT BUTTONS */
+  .nav-right {
+    display: none;
+  }
+}
+
+/* DESKTOP ONLY */
+@media (min-width: 769px) {
+  .mobile-toggle {
+    display: none;
   }
 }

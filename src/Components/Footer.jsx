@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.scss";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -18,25 +19,53 @@ export default function Footer() {
         {/* Center Column */}
         <div className="footer__column footer__links">
           <ul>
-            <li>Our Work</li>
-            <li>Our Impact</li>
-            <li>Active Programs</li>
-            <li>Orphan Support Program</li>
-            <li>Women's Community Gardens Program</li>
-            <li>Widows Empowerment Fund</li>
+          
+            <a href="/our-wrok">
+              <li>Our Work</li>
+            </a>
+           <a href="our-impact">
+             <li>Our Impact</li>
+           </a>
+          <a href="active-programm">
+              <li>Active Programs</li>
+          </a>
+           <a href="orphan-support-programm">
+             <li>Orphan Support Program</li>
+           </a>
+            <a href="women-community">
+              <li>Women's Community Gardens Program</li>
+            </a>
+          <a href="widows-fund">
+              <li>Widows Empowerment Fund</li>
+          </a>
           </ul>
         </div>
 
         {/* Right Column */}
         <div className="footer__column footer__links">
           <ul>
-            <li>Home</li>
-            <li>Donate</li>
-            <li>Contact</li>
-            <li>Ways To Give</li>
-            <li>Partner With Us</li>
-            <li>Volunteer</li>
-            <li>Donate Monthly</li>
+          <a href="/">
+              <li>Home</li>
+          </a>
+            <a href="donate">
+              <li>Donate</li>
+            </a>
+          <a href="contact">
+              <li>Contact</li>
+          </a>
+           <a href="way-to-give">
+             <li>Ways To Give</li>
+           </a>
+          <a href="partner">
+              <li>Partner With Us</li>
+          </a>
+          <a href="volunter">
+              <li>Volunteer</li>
+          </a>
+           
+           <a href="donate-monthley">
+             <li>Donate Monthly</li>
+           </a>
           </ul>
         </div>
       </div>

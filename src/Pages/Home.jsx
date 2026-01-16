@@ -57,7 +57,7 @@ const Home = () => {
               to bring change, transform lives, and build a future.
             </p>
             <p className="read-more">
-              Read How a Story of Survival Became a Mission &rarr;
+             <a href="/story-mission">Read How a Story of Survival Became a Mission &rarr;</a>
             </p>
           </div>
         </div>
@@ -67,7 +67,9 @@ const Home = () => {
         <div className="suporting-orphans-wrapper">
           <h2>Impacting Lives And Supporting Orphans, Widows, And Unserved Communities</h2>
           <div className="supporting-bg-wrapper">
-            <div className="see-btn">SEE OUR IMpACT</div>
+            <div className="see-btn">
+              <a className="see-btn" href="our-impact">SEE OUR IMpACT</a>
+              </div>
           </div>
         </div>
         <Cards />
@@ -82,7 +84,7 @@ const Home = () => {
           <p>We are AKAFI, the hope to orphans, widows, and the community. Through education to the orphans,</p>
           <p>sustainable programs for the widows, and the development innitiatives for the community, we bring change</p>
           <p>and transform lives.</p>
-          <button className="see-btn">Explore Our Work</button>
+          <button className="see-btn"><a href="orphan-support-programm">Explore Our Work</a></button>
         </div>
         <div className="orphan-section">
           {/* Right image */}
@@ -96,7 +98,8 @@ const Home = () => {
           <div className="orphan-left">
             <h2>Orphan Support</h2>
             <p> When a child loses their parents, access to education becomes uncertain. <strong> AKAFI </strong> ensures orphans receive school uniforms, shoes, and learning materials — restoring confidence, dignity, and the opportunity to stay in school. </p>
-            <button className="explore-btn">EXPLORE ORPHAN SUPPORT</button>
+                      <button className="explore-btn"><a href="orphan-support-programm">EXPLORE ORPHAN SUPPORT</a></button>
+
           </div>
         </div>
         {/*  */}
@@ -107,15 +110,12 @@ const Home = () => {
           <div className="orphan-left">
             <h2>Women’s Empowerment & Resilience</h2>
             <p> When a child loses their parents, access to education becomes uncertain. <strong> AKAFI </strong> ensures orphans receive school uniforms, shoes, and learning materials — restoring confidence, dignity, and the opportunity to stay in school. </p>
-            <button className="explore-btn">EXPLORE ORPHAN SUPPORT</button>
+            <button className="explore-btn"><a href="orphan-support-programm">EXPLORE ORPHAN SUPPORT</a></button>
           </div>
           {/* Right image */}
           <div className="orphan-right">
             <img src={women} alt="Support initiative" className="orphan-img" />
           </div>
-
-
-
         </div>
         {/* widows fund */}
         <div className="orphan-section">
@@ -133,7 +133,7 @@ const Home = () => {
             <p>
               Widows are pillars of their families. We restore stability by helping them rebuild their confidence and income through small, accessible micro-loans giving them the support they need to start or grow small businesses. These opportunities open the door to long-term security, allowing women to regain financial independence, provide for their children, and create brighter futures. With each empowered widow, communities become stronger, more resilient, and full of possibility.
             </p>
-            <button className="explore-btn">EXPLORE ORPHAN SUPPORT</button>
+            <button className="explore-btn"><a href="orphan-support-programm">EXPLORE ORPHAN SUPPORT</a></button>
           </div>
         </div>
       </div>

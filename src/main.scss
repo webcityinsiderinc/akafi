@@ -48,6 +48,7 @@ body {
       margin: 20px 0;
       font-size: 16px;
       opacity: 0.9;
+      color: white;
     }
 
     .donate-btn {
@@ -57,6 +58,10 @@ body {
       border: none;
       font-weight: 600;
       cursor: pointer;
+      a{
+         color: #fff;
+         text-decoration: none;
+      }
     }
   }
 
@@ -154,6 +159,15 @@ body {
         line-height: 1.8;
         color: #333;
         margin-bottom: 3px;
+         text-align: justify;
+        a{
+             font-weight: 600;
+          color: #1d1d6f;
+          cursor: pointer;
+          margin-top: 28px;
+          text-decoration: none;
+          text-align: justify;
+        }
 
         &.read-more {
           font-weight: 600;
@@ -310,6 +324,11 @@ body {
       padding: 12px 0px;
       color: white;
       align-items: center;
+      text-decoration: none;
+      a{
+              text-decoration: none;
+              color: white;
+      }
     }
   }
 }
@@ -454,7 +473,13 @@ body {
     display: flex;
     justify-content: center;
     border: none;
+        text-decoration: none;
+    a{
+      text-decoration: none;
+      color: white;
+    }
   }
+
 }
 
 .orphan-section {
@@ -489,17 +514,22 @@ body {
   }
 
   .explore-btn {
-    background-color: #0f2a49;
-    color: white;
-    border: none;
+ color: #120445;
+    border: 1px solid #5A1482;
+    color: #5A1482;
     padding: 12px 20px;
     font-size: 14px;
     border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s ease;
-
+    background-color: transparent;
+a{
+     color: #5A1482;
+     text-decoration: none;
+}
     &:hover {
-      background-color: #14365f;
+      // background-color: #14365f;
+      color: white;
     }
   }
 }
@@ -750,6 +780,7 @@ $gray-underline: #dcdfe4;
       font-weight: 800;
       text-transform: uppercase;
       color: #FFFFFF;
+      line-height: 120px;
 
       @media (max-width: 768px) {
         font-size: 2rem;
@@ -2927,3 +2958,240 @@ $font-sans: "Inter", sans-serif;
     }
   }
 }
+// our team page scss start here 
+.hero-section-our-team{
+  background-color: #120445;
+  color: white;
+  text-align: center;
+  padding: 160px 20px;
+  font-family: 'Inter', sans-serif;
+  .title{
+    font-family: "Jost", Sans-serif;
+    font-size: 160px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  p{
+        font-family: "Manrope", Sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FDFDFD;
+  }
+}
+.leadership-team {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d1d5a;
+    margin-bottom: 3rem;
+  }
+
+  .team-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 220px;
+
+    .image-wrapper {
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    .text-wrapper {
+      margin-top: 1rem;
+      h3 {
+        font-size: 20px;
+           font-family: "Manrope", Sans-serif;
+    font-weight: 700;
+    color: #120445;
+        margin-bottom: 0.3rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: #555;
+      }
+    }
+
+    &.size-1 {
+      max-width: 240px;
+    }
+
+    &.size-2 {
+      max-width: 260px;
+    }
+
+    &.size-3 {
+      max-width: 280px;
+    }
+
+    &.size-4 {
+      max-width: 290px;
+    }
+  }
+}
+.board-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #2d1d5a;
+    margin-bottom: 3rem;
+  }
+
+  .board-row {
+    display: flex;
+    // justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: nowrap; // force single row
+    overflow-x: auto; // scroll if screen is small
+  }
+
+  .director-card {
+    flex: 3 0 220px;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2d1d5a;
+      margin-bottom: 0.3rem;
+      text-align: justify;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #555;
+        text-align: justify;
+    }
+  }
+}
+// contact page start here
+.contact-page {
+  padding: 4rem 2rem;
+  background-color: #120445;
+  font-family: sans-serif;
+
+  .contact-grid {
+    gap: 3rem;
+    margin: 0 auto;
+    display: flex;
+
+  }
+
+  .info-section {
+    gap: 2rem;
+
+    .info-block {
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 0.8rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: white;
+        margin-bottom: 0.5rem;
+      }
+
+      ul {
+        padding-left: 1.2rem;
+        margin-bottom: 0.5rem;
+
+        li {
+          font-size: 0.95rem;
+          color: white;
+          margin-bottom: 0.3rem;
+        }
+      }
+    }
+  }
+
+  .form-section {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        width: 100%;
+    max-width: 830px;
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #2d1d5a;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      input,
+      textarea {
+        padding: 0.8rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        resize: vertical;
+      }
+
+      textarea {
+        min-height: 120px;
+      }
+
+      button {
+        padding: 0.8rem;
+        background-color: #2d1d5a;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background-color: #1e1240;
+        }
+      }
+    }
+  }
+}
+

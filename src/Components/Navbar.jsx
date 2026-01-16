@@ -2,9 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
 import { FaChevronDown } from "react-icons/fa";
 import drop from "../images/drop-img.jpg"
+import { NavLink } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+
 
 const Navbar = () => {
- const [scroll, setScroll] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,79 +32,134 @@ const Navbar = () => {
         {/* LEFT */}
         <div className="nav-left">
           <div className="logo">AKAFI</div>
+<div className="mobile-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+  {menuOpen ? <FaTimes /> : <FaBars />}
+</div>
 
-          <ul className="menu">
-            <li>Home</li>
+
+        <ul className={`menu ${menuOpen ? "open" : ""}`}>
+            {/* HOME */}
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
 
             {/* OUR WORK */}
             <li className="dropdown">
-              <span>Our Work <FaChevronDown /></span>
+              <span>
+                Our Work <FaChevronDown />
+              </span>
 
               <div className="dropdown-menu work-dropdown">
                 <ul className="work-list">
-                  <li>Active Programs</li>
-                  <li>Orphan Support Programs</li>
-                  <li>Women’s Community Gardens</li>
-                  <li>Widows Empowerment Fund</li>
+                   <li>
+                    <NavLink to="/our-wrok">Our Work</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/active-programm">Active Programs</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/orphan-support-programm">
+                      Orphan Support Programs
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/women-community">
+                      Women’s Community Gardens
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/widows-fund">
+                      Widows Empowerment Fund
+                    </NavLink>
+                  </li>
                 </ul>
 
                 <div className="work-cards">
-                  <div className="card">
+                  <NavLink to="/orphan-support-programm" className="card">
                     <img src={drop} alt="" />
                     <div className="card-text-wraper">
-                        <h6>Women Gardens</h6>
-                        <p>providing school uniforms,</p>
+                      <h6>Orphan Support Programs</h6>
+                      <p>Providing school uniforms, shoes, and learning essentials...</p>
                     </div>
-                  </div>
-                  <div className="card">
-                     <img src={drop} alt="" />
+                  </NavLink>
+
+                  <NavLink to="/women-community" className="card">
+                    <img src={drop} alt="" />
                     <div className="card-text-wraper">
-                        <h6>Women Gardens</h6>
-                        <p>providing school uniforms,</p>
+                      <h6>Women’s Community Gardens</h6>
+                      <p>Supporting women with seeds, tools, and fertilizers to grow...</p>
                     </div>
-                  </div>
-                  <div className="card">
-                  <img src={drop} alt="" />
+                  </NavLink>
+
+                  <NavLink to="/widows-fund" className="card">
+                    <img src={drop} alt="" />
                     <div className="card-text-wraper">
-                        <h6>Women Gardens</h6>
-                        <p>providing school uniforms,</p>
+                      <h6>Widows Empowerment Fund</h6>
+                      <p>Offering micro-loans that help widows start or rebuild...</p>
                     </div>
-                  </div>
+                  </NavLink>
                 </div>
               </div>
             </li>
 
-            {/* OTHER DROPDOWNS */}
+            {/* OUR IMPACT */}
             <li>
-              <span>Our Impact</span>
+              <NavLink to="/our-impact">Our Impact</NavLink>
             </li>
 
+            {/* TAKE ACTION */}
             <li className="dropdown">
-              <span>Take Action <FaChevronDown /></span>
+              <span>
+                Take Action <FaChevronDown />
+              </span>
               <ul className="dropdown-menu simple">
-                <li>Donate</li>
-                  <li>Donate Monthly</li>
-                  <li>Ways To Give</li>
-                  <li>Partner With Us</li>
-                <li>Volunteer</li>
+                <li>
+                  <NavLink to="/donate">Donate</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/donate-monthley">Donate Monthly</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/way-to-give">Ways To Give</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/partner">Partner With Us</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/volunter">Volunteer</NavLink>
+                </li>
               </ul>
             </li>
 
+            {/* ABOUT US */}
             <li className="dropdown">
-              <span>About Us <FaChevronDown /></span>
+              <span>
+                About Us <FaChevronDown />
+              </span>
               <ul className="dropdown-menu simple">
-                <li>Story & Mission</li>
-                <li>Our Team</li>
-                <li>Contact</li>
+                <li>
+                  <NavLink to="/story-mission">Story & Mission</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/our-team">Our Team</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/contact">Contact</NavLink>
+                </li>
               </ul>
             </li>
           </ul>
+
         </div>
 
         {/* RIGHT */}
         <div className="nav-right">
-          <button className="volunteer">Volunteer</button>
-          <button className="donate">Donate</button>
+         <button className="volunteer">
+  <NavLink to="/volunter">Volunteer</NavLink>
+</button>
+           <button className="volunteer">
+  <NavLink to="/donate">Donate</NavLink>
+</button>
         </div>
 
       </div>

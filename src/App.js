@@ -15,6 +15,8 @@ import WaysToGive from './Pages/WaysToGive';
 import Partner from './Pages/Partner';
 import Volunter from './Pages/Volunter';
 import StoryMission from './Pages/StoryMission';
+import OurTeam from './Pages/OurTeam';
+import ContactPage from './Pages/ContactPage';
 
 // Create router
 const router = createBrowserRouter([
@@ -31,6 +33,8 @@ const router = createBrowserRouter([
   { path: "partner", element: <Partner/>,},
   { path: "volunter", element: <Volunter/>,},
   { path: "story-mission", element: <StoryMission/>,},
+  { path: "our-team", element: <OurTeam/>,},
+  { path: "contact", element: <ContactPage/>,},
 ]);
 
 function App() {
